@@ -1,7 +1,3 @@
-{{#each data as |test|}}
-  {{test}}
-{{/each}}
-
 <EmberTable as |t|>
   <t.head @columns={{columns}} as |h|>
     <h.row as |r|>
@@ -11,7 +7,7 @@
     </h.row>
   </t.head>
 
-  <t.body @rows={{rows}} as |b|>
+  <t.body @rows={{data}} as |b|>
     <b.row as |r|>
       <r.cell as |value|>
         {{value}}

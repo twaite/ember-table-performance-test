@@ -10,100 +10,63 @@ export default class TestTableComponent extends Component {
   get columns() {
     return [
       {
-        cellComponent: 'cells/k-index-cell',
         useRowMeta: true,
         width: 40,
       },
       {
         width: 150,
         name: 'Select One',
-        valuePath: 'department',
-        cellComponent: 'cells/k-enum-select-cell',
-        args: {
-          options: this.get('model.departments'),
-        },
+        valuePath: 'selectOne',
       },
       {
         width: 125,
         name: 'Select Two',
-        valuePath: 'propertyType',
-        cellComponent: 'cells/k-enum-select-cell',
-        args: {
-          options: this.get('model.propertyTypes'),
-        },
+        valuePath: 'selectTwo',
       },
       {
         width: 200,
         name: 'Select Three',
-        valuePath: 'propertyEquipmentGroupType',
-        cellComponent: 'cells/k-enum-select-cell',
-        args: {
-          options: this.get('model.propertyEquipmentGroupTypes'),
-        },
+        valuePath: 'selectThree',
       },
       {
         width: 100,
         name: 'Text One',
-        valuePath: 'itemName',
-        cellComponent: 'cells/k-input-cell',
+        valuePath: 'textOne',
       },
       {
         width: 100,
         name: 'Text Two',
-        valuePath: 'model',
-        cellComponent: 'cells/k-input-cell',
+        valuePath: 'textTwo',
       },
       {
         width: 100,
         name: 'Currency',
-        valuePath: 'newCost',
-        cellClassNames: 'text-right',
-        cellComponent: 'cells/k-input-cell',
-        args: {
-          type: 'number',
-        },
+        valuePath: 'currency',
       },
       {
         width: 100,
         name: 'Text Three',
-        valuePath: 'size',
-        cellComponent: 'cells/k-input-cell',
+        valuePath: 'textThree',
       },
       {
         width: 100,
-        name: 'Enum Four',
-        valuePath: 'unit',
-        cellComponent: 'cells/k-basic-select-cell',
-        args: {
-          options: ['', 'Foot', 'Mile'],
-        },
+        name: 'Select Four',
+        valuePath: 'selectFour',
       },
       {
         width: 100,
         name: 'Number Cell One',
-        valuePath: 'minimumSize',
-        cellComponent: 'cells/k-input-cell',
-        cellClassNames: 'text-right',
-        args: {
-          type: 'number',
-        },
+        valuePath: 'numberOne',
       },
       {
         width: 100,
         name: 'Number Cell Two',
-        valuePath: 'maximumSize',
-        cellComponent: 'cells/k-input-cell',
-        cellClassNames: 'text-right',
-        args: {
-          type: 'number',
-        },
+        valuePath: 'numberTwo',
       },
       {
         width: 60,
         name: 'Checkbox',
-        valuePath: 'perUnit',
-        cellComponent: 'cells/k-checkbox-cell',
-        cellClassNames: 'text-center',
+        valuePath: 'checkbox',
       },
     ];
   }
