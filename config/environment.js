@@ -2,6 +2,9 @@
 
 module.exports = function(environment) {
   let ENV = {
+    '@ember-decorators/argument': {
+      ignoreComponentsWithoutValidations: true,
+    },
     modulePrefix: 'ember-table-test',
     environment,
     rootURL: '/',

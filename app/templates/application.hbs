@@ -1,5 +1,5 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<h1>Table Performance Test</h1>
 
-{{outlet}}
+<DataLoader @onInit={{action "loadData"}}>
+  <TestTableComponent @data={{data}}/>
+</DataLoader>

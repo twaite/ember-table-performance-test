@@ -1,0 +1,23 @@
+
+table {
+  font-size: .8rem;
+}
+
+th {
+  border: 1px solid grey;
+  border-right: none;
+  background: lightgrey;
+}
+
+th:last-of-type {
+  border-right: 1px solid grey;
+}
+
+td {
+  border: 1px solid lightgrey;
+  border-right: none;
+}
+
+td:last-of-type {
+  border-right: 1px solid lightgrey;
+}
