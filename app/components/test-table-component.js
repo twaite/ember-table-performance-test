@@ -6,17 +6,22 @@ export default class TestTableComponent extends Component {
   @argument
   data = null;
 
+  selection = null;
+
   @computed
   get columns() {
     return [
       {
         useRowMeta: true,
         width: 40,
+        cellComponent: 'cells/index-cell',
+        cellClassNames: 'text-right',
       },
       {
         width: 150,
         name: 'Select One',
         valuePath: 'selectOne',
+        cellComponent: 'cells/base-cell',
       },
       {
         width: 125,

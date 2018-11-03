@@ -7,10 +7,32 @@
     </h.row>
   </t.head>
 
-  <t.body @rows={{data}} as |b|>
+  <t.body
+    @selection={{selection}}
+    @onSelect={{action (mut selection)}}
+    @checkboxSelectionMode="none"
+    @enableTree={{false}}
+    @staticHeight={{true}}
+    @estimateRowHeight={{30}}
+    @rows={{data}} as |b|>
     <b.row as |r|>
-      <r.cell as |value|>
-        {{value}}
+      <r.cell as |cell column row cellMeta columnMeta rowMeta|>
+        {{#if column.cellComponent}}
+          {{#component
+            column.cellComponent
+            value=cell
+            args=column.args
+            cellClassNames=column.cellClassNames
+            onchange=(action (mut value))
+            rowMeta=(if column.useRowMeta rowMeta)}}
+            {{column.cellClassNames}}
+            {{cell}}
+          {{/component}}
+        {{else}}
+          <span class={{column.cellClassNames}}>
+            {{cell}}
+          </span>
+        {{/if}}
       </r.cell>
     </b.row>
   </t.body>

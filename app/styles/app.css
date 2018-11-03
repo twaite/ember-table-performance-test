@@ -3,6 +3,10 @@ table {
   font-size: .8rem;
 }
 
+.ember-table {
+  max-height: 400px;
+}
+
 th {
   border: 1px solid grey;
   border-right: none;
@@ -20,4 +24,32 @@ td {
 
 td:last-of-type {
   border-right: 1px solid lightgrey;
+}
+
+.et-tr {
+  height: 30px;
+}
+
+.et-tr:hover {
+  background-color: lightblue;
+}
+
+.et-tr.is-selected {
+  background-color: lightskyblue;
+}
+
+.et-tr.is-selected:hover {
+  background-color: lightblue;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }

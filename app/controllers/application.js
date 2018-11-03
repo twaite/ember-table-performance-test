@@ -9,8 +9,9 @@ export default Controller.extend({
 });
 
 function loadData() {
-  Array(8).fill().forEach(() => {
+  Array(1000).fill().forEach((data, index) => {
     this.store.createRecord('table-data', {
+      id: index,
       selectOne: 'one',
       selectTwo: 'two',
       selectThree: 'three',
