@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
 table {
   font-size: .8rem;
@@ -20,6 +24,8 @@ th:last-of-type {
 td {
   border: 1px solid lightgrey;
   border-right: none;
+  padding: 0;
+  border-bottom: none;
 }
 
 td:last-of-type {
@@ -52,4 +58,37 @@ td:last-of-type {
 
 .text-right {
   text-align: right;
+}
+
+.base-cell {
+  height: 30px;
+  line-height: 30px;
+}
+
+input {
+  max-width: 100%;
+  background-color: transparent;
+  border: none;
+  height: 30px;
+  margin: 0;
+  padding: 1px;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.23);
+  border: 2px solid royalblue;
+}
+
+select {
+  height: 30px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+select:focus {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.23);
+  border: 2px solid royalblue;
 }

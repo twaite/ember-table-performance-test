@@ -2,6 +2,7 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
   data: null,
+  selectOptions: null,
 
   actions: {
     loadData,
@@ -12,10 +13,10 @@ function loadData() {
   Array(1000).fill().forEach((data, index) => {
     this.store.createRecord('table-data', {
       id: index,
-      selectOne: 'one',
-      selectTwo: 'two',
-      selectThree: 'three',
-      selectFour: 'four',
+      selectOne: 'One',
+      selectTwo: 'Two',
+      selectThree: 'Three',
+      selectFour: 'Four',
       textOne: 'text one',
       textTwo: 'text two',
       textThree: 'text three',
@@ -28,5 +29,19 @@ function loadData() {
 
   this.setProperties({
     data: this.store.peekAll('table-data'),
+  });
+
+  const options = ['One', 'Two', 'Three', 'Four'];
+
+  options.forEach((opt, index) => {
+    this.store.createRecord('select-option', {
+      id: index,
+      code: opt.toUpperCase(),
+      displayValue: opt,
+    })
+  });
+
+  this.setProperties({
+    selectOptions: this.store.peekAll('select-option'),
   });
 }
